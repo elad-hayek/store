@@ -2,7 +2,7 @@
 
 namespace CustomerService.Domain.Entities;
 
-public sealed class Customer : Entity
+public sealed class Customer : AggregateRoot
 {
     public Customer( string firstName, string lastName, string email, string phoneNumber)
     {

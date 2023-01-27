@@ -2,9 +2,9 @@
 
 namespace CustomerService.Domain.Abstractions;
 
-public interface IRepository<T>:  IReadOnlyRepository<T> where T : Entity
+public interface IRepository<T>:  IReadOnlyRepository<T> where T : AggregateRoot
 {
-    int Insert(T entity);
+    void Insert(T entity);
     void Update(T entity, int updatingUserId);
     void Delete(T entity, int deletingUserId);
     void DeleteById(int id, int deletingUserId);

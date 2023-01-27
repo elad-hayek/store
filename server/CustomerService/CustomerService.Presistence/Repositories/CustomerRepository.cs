@@ -1,5 +1,6 @@
 ﻿using CustomerService.Domain.Abstractions;
 using CustomerService.Domain.Entities;
+using System.Linq.Expressions;
 
 namespace CustomerService.Presistence.Repositories;
 
@@ -24,12 +25,12 @@ public sealed class CustomerRepository : ICustomerRepository
 
     public IReadOnlyCollection<Customer> GetAll()
     {
-        throw new NotImplementedException();
+       return _dbContext.Set<Customer>().ToList().AsReadOnly();
     }
 
-    public IReadOnlyCollection<Customer> GetByCiriteria(Predicate<Customer> crateria)
+    public IReadOnlyCollection<Customer> GetByCiriteria(Expression<Func<Customer, bool>> crateria)
     {
-        throw new NotImplementedException();
+        return _dbContext.Set<Customer>().Where(crateria).ToList().AsReadOnly();
     }
 
     public Customer GetById(int id)
@@ -37,9 +38,9 @@ public sealed class CustomerRepository : ICustomerRepository
         throw new NotImplementedException();
     }
 
-    public int Insert(Customer entity)
+    public void Insert(Customer entity)
     {
-        throw new NotImplementedException();
+        _dbContext.Set<Customer>().Add(entity);
     }
 
     public void Update(Customer entity, int updatingUserId)
