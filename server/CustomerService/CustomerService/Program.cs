@@ -1,12 +1,25 @@
+using CustomerService.Application;
+using CustomerService.Application.Customers;
+using CustomerService.Domain.Abstractions;
+using CustomerService.Presistence;
+using CustomerService.Presistence.Repositories;
+using CustomerService.WebApi;
+using MediatR;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-//builder.Services.AddMediatR
+
+builder.Services.AddControllers().AddApplicationPart(AssemblyRefrences.Presentation);
+
+builder.Services.AddMediatR(AssemblyRefrences.Application);
+
+new ApplicationRegistrations().RegisterServices(builder);
+new PresistenceRegistrations().RegisterServices(builder);
 
 var app = builder.Build();
 

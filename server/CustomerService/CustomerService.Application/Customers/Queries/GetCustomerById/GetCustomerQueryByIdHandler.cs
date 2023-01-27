@@ -5,16 +5,16 @@ using CustomerService.Domain.Entities;
 
 namespace CustomerService.Application.Customers.Queries.GetCustomer;
 
-internal sealed class GetCustomerQueryHandler : IQueryHandler<GetCustomerQuery, Customer>
+internal sealed class GetCustomerQueryByIdHandler : IQueryHandler<GetCustomerByIdQuery, Customer>
 {
     private readonly ICustomerRepository _customerRepository;
 
-    public GetCustomerQueryHandler(ICustomerRepository customerRepository)
+    public GetCustomerQueryByIdHandler(ICustomerRepository customerRepository)
     {
         _customerRepository = customerRepository;
     }
 
-    public Task<Customer> Handle(GetCustomerQuery request, CancellationToken cancellationToken)
+    public Task<Customer> Handle(GetCustomerByIdQuery request, CancellationToken cancellationToken)
     {
         return Task.FromResult(_customerRepository.GetById(request.Id));
     

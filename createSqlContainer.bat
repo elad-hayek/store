@@ -1,0 +1,1 @@
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=customerService2023!" -p 1430:1433 --name customerService --hostname master -d mcr.microsoft.com/mssql/server:2022-latest
