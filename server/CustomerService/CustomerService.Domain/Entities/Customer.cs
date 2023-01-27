@@ -4,14 +4,21 @@ namespace CustomerService.Domain.Entities;
 
 public sealed class Customer : Entity
 {
-    public Customer( string name, string email, string phoneNumber)
+    public Customer( string firstName, string lastName, string email, string phoneNumber)
     {
-        Name = name;
+        FirstName = firstName;
+        LastName = lastName;
         Email = email;
         PhoneNumber = phoneNumber;
     }
 
-    public string Name { get; }
+    public string FirstName { get; }
+    public string LastName { get; }
     public string Email { get; }
     public string PhoneNumber { get; }
+
+    public string GetFullName()
+    {
+        return $"{FirstName} {LastName}";
+    }
 }

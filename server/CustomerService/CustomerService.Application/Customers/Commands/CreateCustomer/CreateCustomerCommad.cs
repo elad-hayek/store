@@ -2,4 +2,4 @@
 
 namespace CustomerService.Application.Customers.Commands.CreateCustomer;
 
-public sealed record CreateCustomerCommad(string Name, string Email, string PhoneNumber) : ICommand<int>;
+public sealed record CreateCustomerCommad(string FirstName, string LastName, string Email, string PhoneNumber) : ICommand<int>;
