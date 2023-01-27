@@ -35,7 +35,7 @@ public sealed class CustomerRepository : ICustomerRepository
 
     public Customer GetById(int id)
     {
-        throw new NotImplementedException();
+        return _dbContext.Set<Customer>().FirstOrDefault(x=>x.Id == id);
     }
 
     public void Insert(Customer entity)

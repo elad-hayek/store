@@ -10,8 +10,8 @@ internal abstract class BaseEntityConfiguration<T>: IEntityTypeConfiguration<T> 
     {
         builder.HasKey(e => e.Id);
         builder.Property(e => e.Id).HasColumnName("ID").ValueGeneratedOnAdd().IsRequired();
-        builder.Property(e => e.CreatedDate).HasColumnName("CreatedDate").ValueGeneratedOnAdd().IsRequired();
-        builder.Property(e => e.UpdatedDate).HasColumnName("UpdateDate").ValueGeneratedOnUpdate();
+        builder.Property(e => e.CreatedDate).HasColumnName("CreatedDate").HasDefaultValueSql("getdate()").IsRequired();
+        builder.Property(e => e.UpdatedDate).HasColumnName("UpdateDate");
         builder.Property(e => e.UpdatingUserId).HasColumnName("UpdatingUserID");
         builder.Property(e => e.DeletedDate).HasColumnName("DeletedDate");
         builder.Property(e => e.DeletedBy).HasColumnName("DeletedBy");
