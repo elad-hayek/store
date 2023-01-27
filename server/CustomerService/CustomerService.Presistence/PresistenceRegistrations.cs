@@ -12,9 +12,11 @@ public sealed class PresistenceRegistrations : IServiceRegistrator
     public void RegisterServices(WebApplicationBuilder builder)
     {
         builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
-        builder.Services.AddScoped<IUnitOfWork, IUnitOfWork>();
+        builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
 
         builder.Services.AddDbContext<CustomerServiceDbContext>(options =>
              options.UseSqlServer(builder.Configuration.GetConnectionString("UserServiceContext")));
+
     }
 }

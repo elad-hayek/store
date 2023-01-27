@@ -8,7 +8,7 @@ internal sealed class CustomerConfiguration : BaseEntityConfiguration<Customer>
 {
     public override void ConfigureEntity(EntityTypeBuilder<Customer> builder)
     {
-        builder.ToTable("Users");
+        builder.ToTable("Customers");
         builder.Property(c => c.FirstName).HasColumnName("FirstName").HasMaxLength(50).IsRequired();
         builder.Property(c => c.LastName).HasColumnName("LastName").HasMaxLength(50).IsRequired();
         builder.Property(c => c.Email).HasColumnName("Email").HasMaxLength(50).IsRequired();
