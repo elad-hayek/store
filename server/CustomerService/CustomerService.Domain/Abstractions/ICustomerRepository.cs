@@ -2,7 +2,7 @@
 
 namespace CustomerService.Domain.Abstractions;
 
-public interface ICustomerRepository : IRepository<Customer>
+public interface ICustomerRepository : IRepository<Customer, int>
 {
 
 }

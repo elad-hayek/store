@@ -4,7 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CustomerService.Presistence.Configurations;
 
-internal abstract class BaseEntityConfiguration<T>: IEntityTypeConfiguration<T> where T: Entity
+internal abstract class BaseEntityConfiguration<T, TIdType>: IEntityTypeConfiguration<T> 
+    where T: Entity<TIdType>
+    where TIdType : notnull
 {
     public void Configure(EntityTypeBuilder<T> builder)
     {

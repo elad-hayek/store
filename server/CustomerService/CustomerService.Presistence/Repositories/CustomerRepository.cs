@@ -33,7 +33,7 @@ public sealed class CustomerRepository : ICustomerRepository
         return _dbContext.Set<Customer>().Where(crateria).ToList().AsReadOnly();
     }
 
-    public Customer GetById(int id)
+    public Customer? GetById(int id)
     {
         return _dbContext.Set<Customer>().FirstOrDefault(x=>x.Id == id);
     }

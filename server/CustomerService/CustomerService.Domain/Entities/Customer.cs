@@ -2,9 +2,9 @@
 
 namespace CustomerService.Domain.Entities;
 
-public sealed class Customer : AggregateRoot
+public sealed class Customer : AggregateRoot<int>
 {
-    public Customer( string firstName, string lastName, string email, string phoneNumber)
+    public Customer(int id, string firstName, string lastName, string email, string phoneNumber) : base(id)
     {
         FirstName = firstName;
         LastName = lastName;

@@ -42,6 +42,9 @@ export const appSlice = createSlice({
     builder.addCase(thunkFunc.fulfilled, (state, action)=>{
       state.direction = action.payload
     })
+    builder.addCase(thunkFunc.pending, (state, action)=>{
+      state.direction = 'true'
+    })
   }
 });
 

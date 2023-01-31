@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace CustomerService.Presistence.Configurations;
 
-internal sealed class CustomerConfiguration : BaseEntityConfiguration<Customer>
+internal sealed class CustomerConfiguration : BaseEntityConfiguration<Customer, int>
 {
     public override void ConfigureEntity(EntityTypeBuilder<Customer> builder)
     {
