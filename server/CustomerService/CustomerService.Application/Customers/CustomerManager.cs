@@ -1,6 +1,7 @@
 ﻿using CustomerService.Application.Customers.Commands.CreateCustomer;
 using CustomerService.Application.Customers.Queries.GetCustomer;
 using CustomerService.Domain.Entities;
+using MapsterMapper;
 using MediatR;
 
 namespace CustomerService.Application.Customers;
@@ -8,10 +9,12 @@ namespace CustomerService.Application.Customers;
 public sealed class CustomerManager
 {
     private readonly ISender _sender;
+    private readonly IMapper _mapper;
 
-    public CustomerManager(ISender sender)
+    public CustomerManager(ISender sender, IMapper mapper)
     {
         _sender = sender;
+        _mapper = mapper;
     }
 
 
@@ -24,7 +27,7 @@ public sealed class CustomerManager
 
     public async Task<int> CreateCustomer(CreateCustomerRequest request, CancellationToken cancellationToken)
     {
-        var command = new CreateCustomerCommad(request);
+        var command = _mapper.Map<CreateCustomerCommand>(request);
         var customerId = await _sender.Send(command, cancellationToken);
         return customerId;
     }

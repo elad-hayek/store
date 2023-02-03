@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ZNC/JJLTADssRDROwGwqN/+CVfj6xcFC1ja2t1BFb/WBwHOtBaNq5V788qJZE+pS2JUn84UoocglR7fi4dM0uA==",
+  "dgSpecHash": "ND9CHKfXQv/uv2Ad46VdHUeIexNK3RjNTjvxFXXEiSfcl8j92qDCbc/Yit3p0TXtUmzUpg0DIsNV+qjaVpjsrA==",
   "success": true,
   "projectFilePath": "E:\\projects\\Store\\server\\CustomerService\\CustomerService.Presentation\\CustomerService.Presentation.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\USER\\.nuget\\packages\\mapster\\7.3.0\\mapster.7.3.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\mapster.core\\1.2.0\\mapster.core.1.2.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.9\\microsoft.aspnet.webapi.client.5.2.9.nupkg.sha512",

@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "h5tln9hSOg9eM5ciSP0VnvgK6Z4Q1r4hz0Tx3lEvF3mWPAb2f8QcMjeb3M/5I36HC/dUu2pTSNaSwRJbgV1Mmg==",
+  "dgSpecHash": "LIU94Ah2qjKI5wPKXJjuenW3Fkksrjg37cm0i9qpDy0V9ZfBJanBCSoFdADzC4EZOFkmfrCkr8doyrQSY29JzA==",
   "success": true,
   "projectFilePath": "E:\\projects\\Store\\server\\CustomerService\\CustomerService\\CustomerService.WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\mapster\\7.3.0\\mapster.7.3.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\mapster.core\\1.2.0\\mapster.core.1.2.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\mapster.dependencyinjection\\1.0.0\\mapster.dependencyinjection.1.0.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.0.0\\mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
